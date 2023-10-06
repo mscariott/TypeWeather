@@ -1,6 +1,20 @@
+
 import './styles.css';
 
-export function NextDaysItem({ data }) {
+export type NextDaysItemProps = {
+  day: string;
+  min: number;
+  max: number;
+  weather: string;
+  icon: string;
+}
+
+type Props = {
+  data: NextDaysItemProps;
+}
+
+
+export function NextDaysItem({ data }: Props) {
   return (
     <div className='next-day-item'>
       <h2>{data.day}</h2>
